@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact to Amit Chauhan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="shortcut icon" href="assets/icons/favicon.ico.png" type="image/x-icon">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #4158D0, #C850C0, #FFCC70);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      width: min(90%, 380px);
+      border-radius: 24px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transform-origin: center;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      margin: 15px auto;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #4158D0, #C850C0);
+      padding: clamp(20px, 5vw, 40px) 20px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1));
+      pointer-events: none;
+    }
+
+    .card-header img {
+      width: clamp(90px, 25vw, 120px);
+      height: clamp(90px, 25vw, 120px);
+      border: 5px solid rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.5s ease, border-color 0.3s ease;
+    }
+
+    .card-header img:hover {
+      transform: scale(1.1) rotate(5deg);
+      border-color: #FFCC70;
+    }
+
+    .card-header h2 {
+      margin: 0;
+      font-size: clamp(1.5em, 4vw, 1.8em);
+      font-weight: 600;
+      letter-spacing: 1px;
+      cursor: pointer;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-header p {
+      margin: 8px 0 0;
+      font-weight: 400;
+      font-size: clamp(0.9em, 3vw, 1.1em);
+      opacity: 0.9;
+      letter-spacing: 0.5px;
+    }
+
+    .card-body {
+      padding: clamp(20px, 5vw, 30px) clamp(15px, 4vw, 25px);
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(15px, 3vw, 18px);
+      font-size: clamp(0.9em, 2.5vw, 1em);
+      color: #333;
+    }
+
+    .info i {
+      color: #4158D0;
+      width: 24px;
+      font-size: 1.2em;
+    }
+
+    .info div {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: center;
+      padding: 8px;
+      border-radius: 12px;
+      transition: background-color 0.3s ease;
+    }
+
+    .info div:hover {
+      background-color: rgba(65, 88, 208, 0.1);
+    }
+
+    .socials {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: clamp(15px, 3vw, 20px);
+      flex-wrap: wrap;
+    }
+
+    .socials a {
+      color: #4158D0;
+      text-decoration: none;
+      font-size: clamp(1.2em, 3vw, 1.4em);
+      padding: 8px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .socials a:hover {
+      color: #C850C0;
+      transform: translateY(-3px);
+      background-color: rgba(65, 88, 208, 0.1);
+    }
+
+    .cont a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      word-break: break-word;
+    }
+
+    .cont a:hover {
+      color: #C850C0;
+    }
+
+    .resume {
+      margin-top: clamp(20px, 4vw, 25px);
+    }
+
+    .resume a {
+      background: linear-gradient(135deg, #4158D0, #C850C0);
+      color: white;
+      padding: clamp(10px, 2vw, 12px) clamp(20px, 4vw, 24px);
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      display: inline-block;
+      box-shadow: 0 5px 15px rgba(65, 88, 208, 0.3);
+      font-size: clamp(0.9em, 2.5vw, 1em);
+    }
+
+    .resume a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(65, 88, 208, 0.4);
+      background: linear-gradient(135deg, #C850C0, #4158D0);
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+
+      .card {
+        margin: 10px;
+      }
+      
+      .info div {
+        flex-direction: row;
+        padding: 10px 5px;
+      }
+      
+      .cont a {
+        font-size: 0.9em;
+      }
+    }
+
+    @media (max-width: 350px) {
+      .card-header h2 {
+        font-size: 1.3em;
+      }
+      
+      .card-header p {
+        font-size: 0.85em;
+      }
+      
+      .info i {
+        width: 20px;
+        font-size: 1.1em;
+      }
+      
+      .socials {
+        gap: 10px;
+      }
+      
+      .resume a {
+        padding: 8px 16px;
+        font-size: 0.85em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="card-header">
+      <img src="assets/images/Amit1.jpg" alt="Profile Picture">
+      <h2>Amit Kumar</h2>
+      <p>Web Developer</p>
+    </div>
+    <div class="card-body">
+      <div class="info">
+        <div class="cont"><i class="fas fa-phone-alt"></i><a href="tel: +918058637318">+91 8058637318</a></div>
+        <div class="cont"><i class="fas fa-envelope"></i> <a
+            href="mailto:aksainikhedla04@gmail.com">amit@chauhan.in</a></div>
+        <div class="cont"><i class="fas fa-map-marker-alt"></i> <a
+            href="https://www.google.com/maps/place/Tilak+Hospital+And+Research+Centre/@26.8835722,75.8994898,17z/data=!3m1!4b1!4m6!3m5!1s0x396db9d532c48d81:0x8c7fadbe3ab62cb3!8m2!3d26.8835674!4d75.9020647!16s%2Fg%2F12625bczr?entry=ttu&g_ep=EgoyMDI1MDQwOC4wIKXMDSoASAFQAw%3D%3D">Jaipur, Rajasthan</a></div>
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/amit-chauhan004"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/+918058637318"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://instagram.com/amitchauhan.004"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <div class="resume">
+        <a href="assets/pdf/Amit Kumar Saini.pdf" target="_blank">Download Resume</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
